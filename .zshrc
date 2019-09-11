@@ -45,7 +45,7 @@ zplugin light zdharma/fast-syntax-highlighting
 
 alias ls='ls -FG'
 alias la='ls -aFG'
-alias ll='ls -lFG'
+alias ll='ls -alFG'
 chpwd() { ls }
 
 Setup fzf
