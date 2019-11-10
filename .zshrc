@@ -48,8 +48,8 @@ alias la='ls -aFG'
 alias ll='ls -alFG'
 chpwd() { ls }
 
-Setup fzf
----------
+# Setup fzf
+# ---------
 if [[ ! "$PATH" == */usr/local/opt/fzf/bin* ]]; then
   export PATH="${PATH:+${PATH}:}/usr/local/opt/fzf/bin"
 fi
@@ -58,8 +58,8 @@ fi
 # ---------------
 [[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
 
-Key bindings
-------------
+# Key bindings
+# ------------
 source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 export FZF_DEFAULT_OPTS='--reverse --border --bind ctrl-k:kill-line'
 export FZF_TMUX_HEIGHT='60%'
