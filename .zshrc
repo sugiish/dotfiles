@@ -25,23 +25,19 @@ setopt pushd_ignore_dups
 setopt no_beep
 setopt no_list_beep
 
-### Added by Zplugin's installer
-source "$HOME/.zplugin/bin/zplugin.zsh"
-autoload -Uz _zplugin
-(( ${+_comps} )) && _comps[zplugin]=_zplugin
-### End of Zplugin's installer chunk
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+[ ! -d $ZINIT_HOME ] && mkdir -p "$(dirname $ZINIT_HOME)"
+[ ! -d $ZINIT_HOME/.git ] && git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+source "${ZINIT_HOME}/zinit.zsh"
 
-zplugin ice pick"async.zsh" src"pure.zsh"
-zplugin light sindresorhus/pure
-
-zplugin ice wait"0" blockf
-zplugin light zsh-users/zsh-completions
-
-zplugin ice wait"0" atload"_zsh_autosuggest_start"
-zplugin light zsh-users/zsh-autosuggestions
-
-zplugin ice wait"0" atinit"zpcompinit; zpcdreplay"
-zplugin light zdharma/fast-syntax-highlighting
+zinit ice pick"async.zsh" src"pure.zsh"
+zinit light sindresorhus/pure
+zinit ice wait"0" blockf
+zinit light zsh-users/zsh-completions
+zinit ice wait"0" atload"_zsh_autosuggest_start"
+zinit light zsh-users/zsh-autosuggestions
+zinit ice wait"0" atinit"zpcompinit; zpcdreplay"
+zinit light zdharma/fast-syntax-highlighting
 
 alias ls='ls -FG'
 alias la='ls -aFG'
@@ -66,8 +62,15 @@ export FZF_TMUX_HEIGHT='60%'
 export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
 
 alias gl='cd $(ghq root)/$(ghq list | fzf)'
-eval "$(rbenv init -)"
-eval "$(jenv init -)"
+function _ghq_list_jump() {
+  gl
+}
+zle -N _ghq_list_jump
+bindkey '^G' _ghq_list_jump
 
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
+### End of Zinit's installer chunk
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
