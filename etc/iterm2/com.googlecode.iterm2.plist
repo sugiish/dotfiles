@@ -234,7 +234,7 @@
 	<key>NSFontPanelAttributes</key>
 	<string>1, 0</string>
 	<key>NSNavLastRootDirectory</key>
-	<string>~/dotfiles/etc/iterm2</string>
+	<string>~/dev/github.com/Arc0re/Iceberg-iTerm2</string>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -270,18 +270,20 @@
 	<true/>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>1311 113 445 77 0 0 1920 1177 </string>
+	<key>NSWindow Frame SUStatusFrame</key>
+	<string>760 808 400 129 0 0 1920 1200 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>857 677 814 486 0 0 1920 1177 </string>
+	<string>857 597 918 566 0 0 1920 1200 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>169 574 650 469 0 0 1920 1177 </string>
+	<string>285 708 650 469 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>516 423 650 469 0 0 1920 1177 </string>
+	<string>0 697 650 469 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 2</key>
-	<string>268 109 650 469 0 0 1920 1177 </string>
+	<string>992 226 866 826 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 3</key>
-	<string>289 86 650 469 0 0 1920 1177 </string>
+	<string>0 0 2546 1506 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 4</key>
-	<string>310 744 650 469 0 0 1920 1177 </string>
+	<string>661 1411 650 469 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 5</key>
 	<string>331 721 650 469 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 6</key>
@@ -2252,6 +2254,8 @@
 	</dict>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>567440949.99699998</real>
+	<key>PMPrintingExpandedStateForPrint2</key>
+	<false/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -2286,7 +2290,9 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-	<string>/Users/shota/dotfiles/etc/iterm2</string>
+	<string>~/dotfiles/etc/iterm2</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
@@ -2296,13 +2302,15 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-08-11T17:05:18Z</date>
+	<date>2021-09-04T09:35:52Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>5</integer>
 	<key>WordCharacters</key>
 	<string>/-+\~_.</string>
+	<key>findMode_iTerm</key>
+	<integer>0</integer>
 	<key>iTerm Version</key>
 	<string>3.3.20181231-nightly</string>
 </dict>
